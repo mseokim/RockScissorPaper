@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rock_scissor_paper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2U-rn-nff">
+                                <rect key="frame" x="112.5" y="40" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6m2-Ly-d94"/>
+                                    <constraint firstAttribute="height" constant="150" id="ifo-BM-zQf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper.png" translatesAutoresizingMaskIntoConstraints="NO" id="OuF-kA-G8W">
+                                <rect key="frame" x="112.5" y="200" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ohB-CY-FEo"/>
+                                    <constraint firstAttribute="height" constant="150" id="vsK-9I-2lf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXO-fA-I89">
+                                <rect key="frame" x="172.5" y="370" width="30" height="30"/>
+                                <state key="normal" title="준비"/>
+                                <connections>
+                                    <action selector="tapstartBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Gw-6X-5oq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가위바위보 애플리케이션" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsY-gL-gvM">
+                                <rect key="frame" x="36" y="440" width="303" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UVR-6f-84l">
+                                <rect key="frame" x="36" y="500.5" width="303" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgU-92-1gJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                        <state key="normal" title="가위"/>
+                                        <connections>
+                                            <action selector="tapScissors" destination="BYZ-38-t0r" eventType="touchUpInside" id="mn4-Fu-QyO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="391-6C-n3v">
+                                        <rect key="frame" x="101" y="0.0" width="101" height="30"/>
+                                        <state key="normal" title="바위"/>
+                                        <connections>
+                                            <action selector="tapRock" destination="BYZ-38-t0r" eventType="touchUpInside" id="4tp-gP-EP7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQE-QZ-dNg">
+                                        <rect key="frame" x="202" y="0.0" width="101" height="30"/>
+                                        <state key="normal" title="보"/>
+                                        <connections>
+                                            <action selector="tapPaper" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jk9-Cb-7KN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LsY-gL-gvM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="0Is-yx-wlJ"/>
+                            <constraint firstItem="x2U-rn-nff" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1Tc-b3-lkx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UVR-6f-84l" secondAttribute="trailing" constant="20" id="1fH-uf-NYm"/>
+                            <constraint firstItem="OuF-kA-G8W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2PU-Pb-glQ"/>
+                            <constraint firstItem="jXO-fA-I89" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="966-bi-QGQ"/>
+                            <constraint firstItem="jXO-fA-I89" firstAttribute="top" secondItem="OuF-kA-G8W" secondAttribute="bottom" constant="20" id="BFe-Tg-Y9g"/>
+                            <constraint firstItem="LsY-gL-gvM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DMy-Vm-9fZ"/>
+                            <constraint firstItem="UVR-6f-84l" firstAttribute="top" secondItem="LsY-gL-gvM" secondAttribute="bottom" constant="40" id="E0S-yo-Dl4"/>
+                            <constraint firstItem="UVR-6f-84l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="G3y-1v-1ZR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LsY-gL-gvM" secondAttribute="trailing" constant="20" id="Jcn-xY-B9i"/>
+                            <constraint firstItem="x2U-rn-nff" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wi7-jK-j0N"/>
+                            <constraint firstItem="OuF-kA-G8W" firstAttribute="top" secondItem="x2U-rn-nff" secondAttribute="bottom" constant="10" id="k9C-6S-8b4"/>
+                            <constraint firstItem="LsY-gL-gvM" firstAttribute="top" secondItem="jXO-fA-I89" secondAttribute="bottom" constant="40" id="tRm-Q6-rk2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="computerImgView" destination="x2U-rn-nff" id="u36-pc-Km1"/>
+                        <outlet property="messageLabel" destination="LsY-gL-gvM" id="XZv-I6-3Ar"/>
+                        <outlet property="playerImgView" destination="OuF-kA-G8W" id="oWF-RS-syI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper.png" width="450" height="450"/>
+    </resources>
+</document>
